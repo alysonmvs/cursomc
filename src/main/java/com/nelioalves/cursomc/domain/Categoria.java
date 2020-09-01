@@ -1,12 +1,18 @@
 package com.nelioalves.cursomc.domain;
 
+import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Objects;
 
+@Entity
 public class Categoria implements Serializable {
     private static final long serialVersionUID = 3666783231078302741L;
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(name = "nome")
     private String nome;
 
     public Categoria() {

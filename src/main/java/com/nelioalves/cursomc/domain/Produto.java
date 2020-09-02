@@ -13,7 +13,7 @@ public class Produto implements Serializable {
     private static final long serialVersionUID = 7504223703366018539L;
 
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nome;
     private Double preco;
